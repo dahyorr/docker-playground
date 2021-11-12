@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+
+  redis-server:
+    image: redis:alpine
+  app:
+    build: .
+    ports:
+      - 4001:8081
+    depends_on:
+      - redis-server
