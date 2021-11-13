@@ -6,4 +6,4 @@ before_install:
   - docker build -t docker-playground -f Dockerfile.dev .
 
 script:
-  - docker run docker-playground npm run test -- --coverage
+  - docker run docker-playground npm run test -- --watchAll=false
